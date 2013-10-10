@@ -12,6 +12,7 @@ Partial Class _Default
         Dim taxablepay As Decimal
         Dim tax As Decimal
         Dim pay As Decimal
+        Dim netpay As Decimal
 
         wage = Val(tbHourlyWage.Text)
         hour = Val(tbWorkingHours.Text)
@@ -19,7 +20,7 @@ Partial Class _Default
 
         prededuction = Val(tbPretaxDeduction.Text)
         postdeduction = Val(tbPosttaxDeduction.Text)
-        taxablepay = grosspay - prededuction - postdeduction
+        taxablepay = grosspay - prededuction
 
         If grosspay < 500 Then
             tax = taxablepay * 0.18
@@ -29,7 +30,19 @@ Partial Class _Default
 
         pay = taxablepay - tax
 
-        lblNetPay.Text = String.Format("{0:C}", pay)
+        netpay = pay - postdeduction
 
+        lblNetPay.Text = String.Format("{0:C}", netpay)
+        imgObama.Visible = True
+
+    End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        tbHourlyWage.Text = " "
+        tbWorkingHours.Text = " "
+        tbPretaxDeduction.Text = " "
+        tbPosttaxDeduction.Text = " "
+        lblNetPay.Text = " "
+        imgObama.Visible = False
     End Sub
 End Class
