@@ -1,12 +1,24 @@
-﻿body {
+﻿
+body {
+    background-color: white;
+    border: 8px ridge grey;
     margin-left: 300px;
     margin-right: 300px;
-    border: 5px solid black;
+}
+div {
+    color: black;
     text-align: center;
-    font-family: 'Segoe Print';
-    height: 850px;
+    font-family: 'Segoe Print'; 
+    background-image:url('img1.png');
+    background-repeat:no-repeat;
+background-position:right;
 }
 
+
+h1 {
+    font-family: 'Old English Text MT';
+    font-size: 40pt;
+}
 .footer {
     font-size: 12px;
 }

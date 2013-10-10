@@ -33,16 +33,14 @@ Partial Class _Default
         netpay = pay - postdeduction
 
         lblNetPay.Text = String.Format("{0:C}", netpay)
-        imgObama.Visible = True
 
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        tbHourlyWage.Text = " "
-        tbWorkingHours.Text = " "
-        tbPretaxDeduction.Text = " "
-        tbPosttaxDeduction.Text = " "
-        lblNetPay.Text = " "
-        imgObama.Visible = False
+        tbHourlyWage.Text = String.Empty
+        tbWorkingHours.Text = String.Empty
+        tbPretaxDeduction.Text = String.Empty
+        tbPosttaxDeduction.Text = String.Empty
+        lblNetPay.Text = String.Empty
     End Sub
 End Class
